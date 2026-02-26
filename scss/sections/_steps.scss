@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as v;
+
+/* =========================================================
+   DEL 3 — SEARCH / SELECT / BOOK (background3.png)
+========================================================= */
+.steps {
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  color: #e8e8e8;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/background3.png") center/cover no-repeat;
+}
+
+/* 3 kolumner */
+.steps__inner {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  text-align: center;
+
+  padding: 70px 0 60px; /* skapar luft + plats för bågen bakom */
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* PNG-ikonerna */
+.step__img {
+  display: block;
+  object-fit: contain;
+}
+
+.step__img--search {
+  width: 105px;
+}
+
+.step__img--select {
+  width: 85px;
+}
+
+.step__img--book {
+  width: 110px;
+}
+
+/* Texten under */
+.step__label {
+  font-family: v.$font-heading; /* Aleo */
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #e8e8e8;
+  margin-top: 6px;
+}
+
+/* BÅGEN: bakom ikonerna, lägre ner */
+.steps__shape {
+  position: absolute;
+  left: 50%;
+  bottom: 22px; /* <- detta är nyckeln (sänk bågen) */
+  transform: translateX(-50%);
+  width: 777px;
+  height: 95px;
+
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+@media (max-width: v.$bp-md) {
+  .steps__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 70px 0 110px;
+  }
+
+  .steps__shape {
+    width: 777px;
+    height: 95px;
+    object-fit: contain;
+  }
+}

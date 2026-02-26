@@ -10,9 +10,16 @@ $font-heading: "Aleo", serif;
 $color-bg: #f6f7fb;
 $color-text: #111;
 $color-muted: rgba(16, 17, 20, 0.72);
+
 $color-white: #fff;
 $color-primary: #5474fd;
-$line: rgba(15, 23, 42, 0.12);
+$color-primary-dark: #496bfe;
+
+$color-dark: #232323; /* används i testimonials/feature */
+$color-light: #f8f8f8;
+
+$line: rgba(15, 23, 42, 0.12); /* funkar för borders (forms/nav popup) */
+$color-error: #b00020;
 
 /* Effects */
 $shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
@@ -25,3 +32,12 @@ $container: 1170px;
 $bp-sm: 600px;
 $bp-md: 900px;
 $bp-lg: 1100px;
+$bp-xl: 1200px;
+
+/* Spacing scale */
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+$space-xxl: 80px;

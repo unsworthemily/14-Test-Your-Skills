@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+
+/* Container (används överallt i HTML) */
+.container {
+  width: min(v.$container, calc(100% - 60px)); /* 30px padding per sida */
+  margin: 0 auto;
+}
+
+/* Enkel grid utility */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: v.$bp-md) {
+  .grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

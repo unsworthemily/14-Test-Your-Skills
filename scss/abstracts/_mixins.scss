@@ -1,0 +1,136 @@
+/* =========================================================
+   MIXINS
+========================================================= */
+
+@use "../abstracts/variables" as v;
+
+/* ---------------------------------------------------------
+   1) Focus Ring (tillgänglighet, matchar resten av projektet)
+--------------------------------------------------------- */
+@mixin focus-ring(
+  $color: #fff,
+  $offset: 3px,
+  $width: 3px
+) {
+  &:focus-visible {
+    outline: $width solid $color;
+    outline-offset: $offset;
+  }
+}
+
+/* ---------------------------------------------------------
+   2) Flex Center (centrera horisontellt + vertikalt)
+--------------------------------------------------------- */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------
+   3) Card Style (generell)
+--------------------------------------------------------- */
+@mixin card-style(
+  $bg: v.$color-white,
+  $shadow: v.$shadow,
+  $radius: v.$radius,
+  $padding: 16px
+) {
+  background: $bg;
+  box-shadow: $shadow;
+  border-radius: $radius;
+  padding: $padding;
+}
+
+/* ---------------------------------------------------------
+   4) Responsive Media Queries (max-width)
+   @include respond-to(md) { ... }
+--------------------------------------------------------- */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: v.$bp-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: v.$bp-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: v.$bp-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: v.$bp-xl) { @content; }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Use sm | md | lg | xl.";
+  }
+}
+
+/* ---------------------------------------------------------
+   5) Overlay Gradient (relativt till parent)
+--------------------------------------------------------- */
+@mixin overlay-gradient(
+  $start: rgba(0, 0, 0, 0.55),
+  $end: rgba(0, 0, 0, 0.35)
+) {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, $start, $end);
+  }
+}
+
+/* ---------------------------------------------------------
+   6) Button Primary (kantig Bhromaon-stil)
+--------------------------------------------------------- */
+@mixin btn-primary(
+  $bg: v.$color-primary,
+  $color: v.$color-white,
+  $radius: 0,
+  $padding: 12px 24px
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $bg;
+  color: $color;
+
+  border: 0;
+  border-radius: $radius;
+  padding: $padding;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: opacity 0.2s ease, transform 0.1s ease;
+
+  @media (hover: hover) {
+    &:hover { opacity: 0.9; }
+  }
+
+  &:active { transform: translateY(1px); }
+
+  @include focus-ring();
+}
+
+/* ---------------------------------------------------------
+   7) Step Icon Circle
+--------------------------------------------------------- */
+@mixin step-icon(
+  $size: 48px,
+  $bg: v.$color-white,
+  $border: 1px solid v.$line
+) {
+  width: $size;
+  height: $size;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+  background: $bg;
+  border: $border;
+}
+
+/* ---------------------------------------------------------
+   8) Text Muted
+--------------------------------------------------------- */
+@mixin text-muted($color: v.$color-muted) {
+  color: $color;
+}

@@ -1,0 +1,81 @@
+@use "variables" as v;
+
+/* =========================================================
+   BASE BUTTON
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: v.$font-heading; /* Aleo */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+
+  transition: background 0.2s ease,
+              filter 0.2s ease,
+              transform 0.1s ease;
+}
+
+/* =========================================================
+   SIZE VARIANTS
+========================================================= */
+
+.btn--lg {
+  width: 228px;
+  height: 63px;
+}
+
+.btn--full {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   COLOR VARIANTS
+========================================================= */
+
+.btn--primary {
+  background: v.$color-primary; /* #5474FD */
+  color: v.$color-white;
+}
+
+.btn--primary:hover {
+  background: #496BFE;
+}
+
+.btn--gradient {
+  background: linear-gradient(90deg, #496BFE, #5474FD);
+  color: v.$color-white;
+}
+
+.btn--gradient:hover {
+  filter: brightness(0.95);
+}
+
+/* =========================================================
+   STATES
+========================================================= */
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

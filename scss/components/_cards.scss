@@ -1,0 +1,106 @@
+@use "variables" as v;
+
+/* =========================================================
+   BASE CARD (återanvändbar)
+========================================================= */
+
+.card {
+  background: v.$color-white;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Innehållsyta */
+.card__content {
+  padding: 40px;
+}
+
+/* Rubrik i kort */
+.card__title {
+  font-family: v.$font-body; /* Josefin Sans */
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #fefefe;
+  margin: 0 0 10px;
+}
+
+/* Meta (t.ex. “Spain / Grand Spain Madrid”) */
+.card__meta {
+  font-family: v.$font-body;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e8e8e8;
+  margin: 0 0 10px;
+}
+
+/* Brödtext */
+.card__text {
+  font-family: v.$font-body;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+/* =========================================================
+   CARD VARIANTS
+========================================================= */
+
+/* Dark card ( feature/testimonial-rutor) */
+.card--dark {
+  background: #232323;
+  color: v.$color-white;
+}
+
+/* Transparent dark overlay */
+.card--overlay {
+  background: rgba(35, 35, 35, 0.9);
+}
+
+/* Storlek (matchar feature) */
+.card--feature-left {
+  width: 543px;
+  min-height: 374px;
+}
+
+.card--feature-right {
+  width: 540px;
+  min-height: 371px;
+  margin-left: auto;
+}
+
+/* =========================================================
+   TESTIMONIAL CARD LAYOUT (bild + content)
+========================================================= */
+
+.card--split {
+  margin: 0 auto;
+  width: min(1170px, 100%);
+  display: grid;
+  grid-template-columns: 445px 1fr;
+  align-items: stretch;
+}
+
+.card__media {
+  width: 445px;
+  height: 284px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: v.$bp-md) {
+  .card--split {
+    grid-template-columns: 1fr;
+  }
+
+  .card__media {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as v;
+
+/* =========================================================
+   NAV
+========================================================= */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__link {
+  color: v.$color-white;
+  font-family: v.$font-heading; /* Aleo */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: 0.95;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .nav__link:hover {
+    opacity: 0.85;
+  }
+}
+
+/* Toggle (mobil) */
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: v.$color-white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: v.$bp-md) {
+  .nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__list {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    flex-direction: column;
+    background: v.$color-white;
+    border: 1px solid v.$line;
+    border-radius: v.$radius;
+    padding: 14px;
+    gap: 12px;
+    min-width: 240px;
+    box-shadow: v.$shadow;
+  }
+
+  .nav__list.is-open {
+    display: flex;
+  }
+
+  .nav__link {
+    color: v.$color-text;
+    opacity: 1;
+  }
+}

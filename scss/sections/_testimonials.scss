@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as v;
+
+/* =========================================================
+   DEL 6 — TESTIMONIALS (background6.png)
+========================================================= */
+.testimonials {
+  min-height: 731px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  /* Jämn overlay */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/background6.png") center/cover no-repeat;
+}
+
+.testimonials__inner {
+  width: 100%;
+}
+
+.testimonials__title {
+  font-family: v.$font-heading; /* Aleo */
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 0 0 80px;
+  text-align: center;
+}
+
+/* Kortet (bild + text-ruta) */
+.testimonial-card {
+  margin: 0 auto;
+  width: min(1170px, 100%);
+  display: grid;
+  grid-template-columns: 445px 1fr;
+  align-items: stretch;
+}
+
+.testimonial-card__img {
+  width: 445px;
+  height: 284px;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-card__content {
+  background: #232323;
+  min-height: 287px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-card__name {
+  font-family: v.$font-body;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #fefefe;
+  margin: 0 0 18px;
+}
+
+.testimonial-card__text {
+  max-width: 581px;
+  font-family: v.$font-body;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+@media (max-width: v.$bp-md) {
+  .testimonial-card {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-card__img {
+    width: 100%;
+    height: auto;
+  }
+  .testimonial-card__content {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,103 @@
+@use "variables" as v;
+
+/* =========================================================
+   BASE TYPOGRAPHY
+========================================================= */
+
+body {
+  font-family: v.$font-body; /* Josefin Sans */
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-text;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$font-heading; /* Aleo */
+  margin: 0 0 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Anpassad hierarki */
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+p {
+  margin: 0 0 1.5rem;
+  font-family: v.$font-body;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+small {
+  font-size: 14px;
+}
+
+/* =========================================================
+   UTILITY TEXT CLASSES (valfritt men snyggt)
+========================================================= */
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  opacity: 0.7;
+}
