@@ -503,8 +503,6 @@ small {
 /* ---------------------------------------------------------
    Utility classes
 --------------------------------------------------------- */
-
-
 .text-center {
   text-align: center;
 }
@@ -901,6 +899,7 @@ small {
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: #e8e8e8;
   margin: 0 0 10px;
 }
@@ -1086,9 +1085,8 @@ small {
   font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 700;
   font-size: 48px;
-  line-height: 76px;
+  line-height: 26px;
   letter-spacing: 4.8px;
-  text-transform: uppercase;
 }
 
 .hero__subtitle {
@@ -1099,6 +1097,7 @@ small {
   line-height: 26px;
   letter-spacing: 6.82px;
   opacity: 0.95;
+  text-transform: none !important;
 }
 
 /* Search-form (kantig, exakt höjd) */
@@ -1191,6 +1190,7 @@ small {
   line-height: 26px;
   letter-spacing: 2.8px;
   color: #ffffff;
+  text-transform: none !important;
   opacity: 0.95;
 }
 
@@ -1223,7 +1223,7 @@ small {
   display: flex;
   align-items: center;
   color: #ffffff;
-  background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url("../images/background2.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), url("../images/background2.png") center/cover no-repeat;
 }
 
 .why__inner {
@@ -1312,7 +1312,7 @@ small {
   align-items: center;
   overflow: hidden;
   color: #e8e8e8;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/background3.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("../images/background3.png") center/cover no-repeat;
 }
 
 /* 3 kolumner */
@@ -1467,7 +1467,7 @@ small {
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1.5px;
-  text-transform: none;
+  text-transform: none !important;
   color: #e8e8e8;
   margin: 0;
 }
@@ -1551,7 +1551,7 @@ small {
   display: flex;
   align-items: center;
   color: #ffffff;
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/background6.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)), url("../images/background6.png") center/cover no-repeat;
 }
 
 .testimonials__inner {
@@ -1569,44 +1569,53 @@ small {
   text-align: center;
 }
 
-/* Kortet (bild + text-ruta) */
-.testimonial-card {
+.testimonial {
   margin: 0 auto;
   width: min(1170px, 100%);
   display: grid;
   grid-template-columns: 445px 1fr;
   align-items: stretch;
-  gap: 0;
-  overflow: hidden; /* håller bilden + content snyggt ihop */
-  border-radius: 0;
 }
 
-.testimonial-card__img {
+.testimonial__img {
   width: 445px;
   height: 284px;
   object-fit: cover;
   display: block;
 }
 
-.testimonial-card__content {
+.testimonial__card {
+  position: relative;
   background: #232323;
   min-height: 287px;
-  padding: 40px;
+  padding: 70px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.testimonial-card__name {
+/* Quote symbol */
+.testimonial__card::before {
+  content: "“";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 48px;
+  line-height: 1;
+  color: #5474fd; /* #5474FD */
+  font-family: "Aleo", serif; /* Aleo */
+}
+
+.testimonial__name {
   font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
-  color: #ffffff;
+  color: #fefefe;
   margin: 0 0 18px;
 }
 
-.testimonial-card__text {
+.testimonial__text {
   max-width: 581px;
   font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 400;
@@ -1616,16 +1625,15 @@ small {
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .testimonial-card {
+  .testimonial {
     grid-template-columns: 1fr;
   }
-  .testimonial-card__img {
+  .testimonial__img {
     width: 100%;
     height: auto;
   }
-  .testimonial-card__content {
+  .testimonial__card {
     min-height: auto;
   }
 }
