@@ -1,0 +1,1638 @@
+@charset "UTF-8";
+/* =========================================================
+   MAIN (entry)
+========================================================= */
+/* Base */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   VARIABLES
+========================================================= */
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+/* =========================================================
+   COLORS
+========================================================= */
+/* =========================================================
+   EFFECTS
+========================================================= */
+/* Rund UI */
+/* Bhromaon-stil (kantig design) */
+/* =========================================================
+   LAYOUT
+========================================================= */
+/* =========================================================
+   BREAKPOINTS
+========================================================= */
+/* =========================================================
+   SPACING SCALE
+========================================================= */
+/* Box model reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Full height layout */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Lists reset */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Form elements inherit font */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Buttons reset */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Textarea resize */
+textarea {
+  resize: vertical;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+/* ---------------------------------------------------------
+   Body text
+--------------------------------------------------------- */
+body {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* Josefin Sans */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Headings
+--------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Aleo", serif; /* Aleo */
+  font-weight: 400;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   Paragraphs
+--------------------------------------------------------- */
+p {
+  margin: 0 0 1.5rem;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Links
+--------------------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   Small text
+--------------------------------------------------------- */
+small {
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------------
+   Utility classes
+--------------------------------------------------------- */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: rgba(16, 17, 20, 0.72);
+}
+
+/* Layout */
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   LAYOUT UTILITIES
+========================================================= */
+/* Container (används överallt i HTML-EN) */
+.container {
+  width: min(1170px, 100% - 60px); /* 30px per sida */
+  margin: 0 auto;
+}
+
+/* Valfritt: tajtare container */
+.container--tight {
+  width: min(1170px, 100% - 40px); /* 20px per sida */
+  margin: 0 auto;
+}
+
+/* Enkel grid utility */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   HEADER WRAPPER
+========================================================= */
+.header {
+  position: static;
+  z-index: 1;
+  background: transparent;
+}
+
+/* =========================================================
+   NAV BAR (lila rad) — sticky
+========================================================= */
+.header__bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #5474fd;
+  color: #ffffff;
+}
+
+/* 1170x80 i Figma */
+.header__inner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+/* BHROMAON / brand */
+.brand {
+  color: #ffffff;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   FOOTER (Del 7)
+========================================================= */
+.footer {
+  color: #ffffff;
+  padding: 90px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url("../images/background3.png") center/cover no-repeat;
+}
+
+/* Centrera allt */
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+/* Brand-blocket */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BHROMAON */
+.footer__logo {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Tagline */
+.footer__tagline {
+  margin: 11px 0 0;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+}
+
+/* Social icons row */
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+/* Icon circles */
+.footer__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .footer__icon:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+}
+.footer__icon:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Font Awesome icons */
+.footer__icon i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+/* Components */
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+/* =========================================================
+   NAV WRAPPER
+========================================================= */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
+.nav__list {
+  display: flex;
+  gap: 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__link {
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .nav__link:hover {
+    opacity: 0.85;
+  }
+}
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+@media (max-width: 900px) {
+  .nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav__list {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 0;
+    padding: 14px;
+    min-width: 240px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  }
+  .nav__list.is-open {
+    display: flex;
+  }
+  .nav__link {
+    color: #111111;
+    opacity: 1;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   BUTTONS
+========================================================= */
+/* =========================================================
+   BASE BUTTON
+========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Aleo", serif; /* Aleo */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0; /* Bhromaon = kantig */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, filter 0.2s ease, transform 0.1s ease;
+}
+
+/* =========================================================
+   SIZE VARIANTS
+========================================================= */
+.btn--lg {
+  width: 228px;
+  height: 63px;
+}
+
+.btn--full {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   COLOR VARIANTS
+========================================================= */
+.btn--primary {
+  background: #5474fd;
+  color: #ffffff;
+}
+@media (hover: hover) {
+  .btn--primary:hover {
+    background: #496bfe;
+  }
+}
+
+.btn--gradient {
+  background: linear-gradient(90deg, #496bfe, #5474fd);
+  color: #ffffff;
+}
+@media (hover: hover) {
+  .btn--gradient:hover {
+    filter: brightness(0.95);
+  }
+}
+
+/* =========================================================
+   STATES
+========================================================= */
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   CARDS
+========================================================= */
+/* =========================================================
+   BASE CARD (återanvändbar)
+========================================================= */
+.card {
+  background: #ffffff;
+  border-radius: 0; /* Bhromaon = kantig */
+  overflow: hidden;
+}
+
+/* Innehållsyta */
+.card__content {
+  padding: 40px;
+}
+
+/* Rubrik i kort */
+.card__title {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* Josefin Sans */
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+/* Meta (t.ex. “Spain”) */
+.card__meta {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e8e8e8;
+  margin: 0 0 10px;
+}
+
+/* Brödtext */
+.card__text {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+/* =========================================================
+   CARD VARIANTS
+========================================================= */
+/* Dark card (feature/testimonial) */
+.card--dark {
+  background: #232323;
+  color: #ffffff;
+}
+
+/* Transparent dark overlay */
+.card--overlay {
+  background: rgba(35, 35, 35, 0.9);
+}
+
+/* Storlek (matchar feature) */
+.card--feature-left {
+  width: 543px;
+  min-height: 374px;
+}
+
+.card--feature-right {
+  width: 540px;
+  min-height: 371px;
+  margin-left: auto;
+}
+
+/* =========================================================
+   SPLIT CARD (testimonial layout)
+========================================================= */
+.card--split {
+  margin: 0 auto;
+  width: min(1170px, 100%);
+  display: grid;
+  grid-template-columns: 445px 1fr;
+  align-items: stretch;
+}
+
+.card__media {
+  width: 445px;
+  height: 284px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card--split {
+    grid-template-columns: 1fr;
+  }
+  .card__media {
+    width: 100%;
+    height: auto;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   FORMS
+========================================================= */
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   MIXINS
+========================================================= */
+/* ---------------------------------------------------------
+   1) Focus Ring (tillgänglighet, matchar resten av projektet)
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   2) Flex Center (centrera horisontellt + vertikalt)
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   3) Card Style (generell)
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   4) Responsive Media Queries (max-width)
+   @include respond-to(md) { ... }
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   5) Overlay Gradient (relativt till parent)
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   6) Button Primary (kantig Bhromaon-stil)
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   7) Step Icon Circle
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
+   8) Text Muted
+--------------------------------------------------------- */
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field__label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.field__input,
+.field__textarea {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 12px 14px;
+  background: #ffffff;
+  outline: none;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+.field__input:focus-visible,
+.field__textarea:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.field__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+.form-error {
+  margin: 0;
+  min-height: 18px;
+  font-size: 13px;
+  color: #b00020;
+}
+
+/* Sections */
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   DEL 1 — HERO (background1.png)
+========================================================= */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: url("../images/background1.png") center/cover no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 70px 0;
+}
+
+.hero__title {
+  margin: 0 0 11px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 76px;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+
+.hero__subtitle {
+  margin: 0 0 34px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 6.82px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+/* Search-form (kantig, exakt höjd) */
+.hero__form {
+  width: min(650px, 100%);
+  height: 63px;
+  margin: 0 auto 22px;
+  display: grid;
+  grid-template-columns: 1fr 153px;
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Input */
+.hero__input {
+  border: 0;
+  padding: 0 28px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 2.8px;
+  outline: none;
+}
+
+.hero__input::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.hero__input:focus-visible {
+  outline: 3px solid #5474fd;
+  outline-offset: -3px; /* hamnar innanför ramen */
+}
+
+/* Knapp */
+.hero__btn {
+  background: #5474fd;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+@media (hover: hover) {
+  .hero__btn:hover {
+    filter: brightness(0.95);
+  }
+}
+.hero__btn:active {
+  transform: translateY(1px);
+}
+
+.hero__btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.hero__btn-text {
+  font-family: "Aleo", serif; /* Aleo */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__btn-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Scroll down */
+.hero__scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 2.8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+/* =========================================================
+   RESPONSIVE (mobil)
+========================================================= */
+@media (max-width: 900px) {
+  .hero__inner {
+    padding: 60px 0;
+  }
+  .hero__form {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .hero__input {
+    height: 63px;
+  }
+  .hero__btn {
+    height: 63px;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   DEL 2 — WHY CHOOSE US (background2.png)
+========================================================= */
+.why {
+  min-height: 685px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url("../images/background2.png") center/cover no-repeat;
+}
+
+.why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.section-title {
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 0;
+  margin: 0 0 40px;
+  color: #ffffff;
+}
+
+.why__content p {
+  max-width: 560px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  color: #e8e8e8;
+  margin: 0 0 24px;
+}
+
+/* Bilder */
+.why__images {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.why__img--one {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.why__img--two {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  .why__inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .why__images {
+    height: auto;
+    display: grid;
+    gap: 20px;
+  }
+  .why__img--one,
+  .why__img--two {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   DEL 3 — SEARCH / SELECT / BOOK (background3.png)
+========================================================= */
+.steps {
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #e8e8e8;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/background3.png") center/cover no-repeat;
+}
+
+/* 3 kolumner */
+.steps__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; /* gör centrerat mer “pixel-säkert” */
+  align-items: end;
+  text-align: center;
+  padding: 70px 0 60px; /* luft + plats för bågen bakom */
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* PNG-ikonerna */
+.step__img {
+  display: block;
+  object-fit: contain;
+}
+
+.step__img--search {
+  width: 105px;
+}
+
+.step__img--select {
+  width: 85px;
+}
+
+.step__img--book {
+  width: 110px;
+}
+
+/* Texten under */
+.step__label {
+  font-family: "Aleo", serif; /* Aleo */
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #e8e8e8;
+  margin-top: 6px;
+}
+
+/* Bågen bakom */
+.steps__shape {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: 777px;
+  height: 95px;
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  .steps__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 70px 0 110px;
+  }
+  /* så bågen inte klipps i bredd på små skärmar */
+  .steps__shape {
+    max-width: 777px;
+    width: 100%;
+    height: auto;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   DEL 4 & 5 — FEATURE (background4/5)
+========================================================= */
+.feature {
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Bakgrund */
+.feature__bg {
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  z-index: 0;
+}
+
+.feature__bg--one {
+  background-image: url("../images/background4.png");
+}
+
+.feature__bg--two {
+  background-image: url("../images/background5.png");
+}
+
+/* Overlay */
+.feature__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Innehåll över overlay */
+.feature__inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+.feature-card {
+  background: rgba(35, 35, 35, 0.9);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 0;
+}
+
+/* Storlekar */
+.feature--left .feature-card {
+  width: 543px;
+  min-height: 374px;
+}
+
+.feature--right .feature-card {
+  width: 540px;
+  min-height: 371px;
+  margin-left: auto;
+}
+
+/* Meta */
+.feature-card__meta {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+/* Titel */
+.feature-card__title {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Text */
+.feature-card__text {
+  max-width: 508px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+.feature-card__btn {
+  width: 228px;
+  height: 63px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #496bfe, #5474fd);
+  color: #ffffff;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+@media (hover: hover) {
+  .feature-card__btn:hover {
+    filter: brightness(0.95);
+  }
+}
+.feature-card__btn:active {
+  transform: translateY(1px);
+}
+
+.feature-card__btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  .feature--left .feature-card,
+  .feature--right .feature-card {
+    width: 100%;
+    min-height: auto;
+  }
+}
+/* =========================================================
+   BASE (Reset + grundlayout)
+========================================================= */
+/* =========================================================
+   DEL 6 — TESTIMONIALS (background6.png)
+========================================================= */
+.testimonials {
+  min-height: 731px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/background6.png") center/cover no-repeat;
+}
+
+.testimonials__inner {
+  width: 100%;
+}
+
+.testimonials__title {
+  font-family: "Aleo", serif; /* Aleo */
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0 0 80px;
+  text-align: center;
+}
+
+/* Kortet (bild + text-ruta) */
+.testimonial-card {
+  margin: 0 auto;
+  width: min(1170px, 100%);
+  display: grid;
+  grid-template-columns: 445px 1fr;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden; /* håller bilden + content snyggt ihop */
+  border-radius: 0;
+}
+
+.testimonial-card__img {
+  width: 445px;
+  height: 284px;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-card__content {
+  background: #232323;
+  min-height: 287px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-card__name {
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+  margin: 0 0 18px;
+}
+
+.testimonial-card__text {
+  max-width: 581px;
+  font-family: "Josefin Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #e8e8e8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-card {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-card__img {
+    width: 100%;
+    height: auto;
+  }
+  .testimonial-card__content {
+    min-height: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
