@@ -1584,26 +1584,26 @@ small {
   display: block;
 }
 
-.testimonial__card {
+testimonial__card {
   position: relative;
   background: #232323;
   min-height: 287px;
-  padding: 70px 40px 40px;
+  padding: 60px 40px 40px 70px; /* extra vänsterpadding */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Quote symbol */
+/* Quote */
 .testimonial__card::before {
   content: "“";
   position: absolute;
-  top: 20px;
+  top: 55px;
   left: 40px;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1;
-  color: #5474fd; /* #5474FD */
-  font-family: "Aleo", serif; /* Aleo */
+  font-family: "Aleo", serif;
+  color: #5474fd;
 }
 
 .testimonial__name {

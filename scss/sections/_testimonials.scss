@@ -43,26 +43,26 @@
   display: block;
 }
 
-testimonial__card {
+.testimonial__card {
   position: relative;
   background: #232323;
   min-height: 287px;
-  padding: 60px 40px 40px 70px; /* extra vänsterpadding */
+  padding: 80px 40px 40px 40px;  
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-/* Quote */
+/* Quote symbol */
 .testimonial__card::before {
-  content: "\201C";
+  content: "“";    
   position: absolute;
-  top: 55px;   
-  left: 40px;     
-  font-size: 40px;
+  top: 25px;
+  left: 40px;
+  font-size: 48px;
   line-height: 1;
-  font-family: v.$font-heading;
-  color: v.$color-primary;
+  color: #5474FD;     
+  z-index: 2;          /* säkerställ att den ligger ovanpå */
 }
 
 
