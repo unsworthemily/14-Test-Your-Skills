@@ -28,7 +28,6 @@
   background: v.$color-white;
   outline: none;
   font-family: v.$font-body;
-
   @include m.focus-ring();
 }
 

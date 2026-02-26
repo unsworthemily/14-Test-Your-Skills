@@ -38,7 +38,7 @@
   font-size: 48px;
   line-height: 26px;
   letter-spacing: 4.8px;
-  text-transform: uppercase;
+  
 }
 
 .hero__subtitle {
@@ -143,7 +143,7 @@
   line-height: 26px;
   letter-spacing: 2.8px;
   color: v.$color-white;
-  text-transform: none;
+  text-transform: none !important;
   opacity: 0.95;
 }
 

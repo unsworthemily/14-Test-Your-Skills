@@ -503,9 +503,7 @@ small {
 /* ---------------------------------------------------------
    Utility classes
 --------------------------------------------------------- */
-.text-uppercase {
-  text-transform: uppercase;
-}
+
 
 .text-center {
   text-align: center;
@@ -903,7 +901,6 @@ small {
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
   color: #e8e8e8;
   margin: 0 0 10px;
 }
@@ -1101,7 +1098,6 @@ small {
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 6.82px;
-  text-transform: uppercase;
   opacity: 0.95;
 }
 
@@ -1195,7 +1191,6 @@ small {
   line-height: 26px;
   letter-spacing: 2.8px;
   color: #ffffff;
-  text-transform: uppercase;
   opacity: 0.95;
 }
 
@@ -1472,7 +1467,7 @@ small {
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #e8e8e8;
   margin: 0;
 }
