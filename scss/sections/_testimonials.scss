@@ -43,27 +43,28 @@
   display: block;
 }
 
-.testimonial__card {
-  position: relative;             
+testimonial__card {
+  position: relative;
   background: #232323;
   min-height: 287px;
-  padding: 70px 40px 40px;       
+  padding: 60px 40px 40px 70px; /* extra vänsterpadding */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Quote symbol */
+/* Quote */
 .testimonial__card::before {
-  content: "“";
+  content: "\201C";
   position: absolute;
-  top: 20px;
-  left: 40px;
-  font-size: 48px;
+  top: 55px;   
+  left: 40px;     
+  font-size: 40px;
   line-height: 1;
-  color: v.$color-primary; /* #5474FD */
-  font-family: v.$font-heading; /* Aleo */
+  font-family: v.$font-heading;
+  color: v.$color-primary;
 }
+
 
 .testimonial__name {
   font-family: v.$font-body;
