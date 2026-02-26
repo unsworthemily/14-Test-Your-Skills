@@ -17,18 +17,53 @@
 <body>
 
 <!--===================================================================
-Del 1 Hero Section
+Del 1 Hero Section + Navigation
 ===================================================================-->
-<header>Bhromaon
-<p>Safe Travel Anywhere</p>
-<p>Search Your Travel Destination</p>
-<button>Search</button>
-<p>Scroll Down</p>
-Bhromaon
-Who We Are
-What We Do
-Travel With Us
-Contact Us
+<header class="header" id="top">
+    <!--Hero-->
+    <section class="hero" aria-label="Hero Section">
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="container hero__inner">
+            <h1 class="hero__title">BHROMAON</h1>
+            <p class="hero__subtitle">Safe Travel Anywhere</p>
+
+            <form class="hero__form" action="#">
+                <input class="hero__input" type="text" placeholder="Search your travel destination">
+                <button class="hero__btn" type="submit">
+                    <span class="hero__btn-text">Search</span>
+                    <img src="images/search.png" alt="" aria-hidden="true" class="hero__btn-icon">
+                </button>
+            </form>
+   
+            <a class="hero__scroll" href="#who">
+                Scroll Down <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!--Nav Bar blå rad under hero-->
+
+
+    <nav class="header__bar" aria-label="Primary navigation">
+        <div class="container header__inner">
+            <a class="brand" href="#top" aria-label="Bhromaon home">BHROMAON</a>
+            
+            <div class="nav">
+                <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="sr-only">Omen menu</span>
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+
+                <ul class="nav__list" id="nav-menu">
+                    <li class="navbar__item"><a class="navbar__link" href="#who">Who We Are</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#what">What We Do</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#travel">Travel With Us</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 <main>
 <!--===================================================================
