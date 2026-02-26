@@ -1,4 +1,8 @@
-@use "variables" as v;
+/* =========================================================
+   CARDS
+========================================================= */
+
+@use "../abstracts/variables" as v;
 
 /* =========================================================
    BASE CARD (återanvändbar)
@@ -6,7 +10,7 @@
 
 .card {
   background: v.$color-white;
-  border-radius: 0;
+  border-radius: v.$radius-sharp; /* Bhromaon = kantig */
   overflow: hidden;
 }
 
@@ -22,11 +26,11 @@
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #fefefe;
+  color: v.$color-white;
   margin: 0 0 10px;
 }
 
-/* Meta (t.ex. “Spain / Grand Spain Madrid”) */
+/* Meta (t.ex. “Spain”) */
 .card__meta {
   font-family: v.$font-body;
   font-weight: 400;
@@ -52,9 +56,9 @@
    CARD VARIANTS
 ========================================================= */
 
-/* Dark card ( feature/testimonial-rutor) */
+/* Dark card (feature/testimonial) */
 .card--dark {
-  background: #232323;
+  background: v.$color-dark;
   color: v.$color-white;
 }
 
@@ -76,12 +80,12 @@
 }
 
 /* =========================================================
-   TESTIMONIAL CARD LAYOUT (bild + content)
+   SPLIT CARD (testimonial layout)
 ========================================================= */
 
 .card--split {
   margin: 0 auto;
-  width: min(1170px, 100%);
+  width: min(v.$container, 100%);
   display: grid;
   grid-template-columns: 445px 1fr;
   align-items: stretch;
@@ -94,6 +98,7 @@
   display: block;
 }
 
+/* Responsive */
 @media (max-width: v.$bp-md) {
   .card--split {
     grid-template-columns: 1fr;

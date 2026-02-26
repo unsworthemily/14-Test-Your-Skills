@@ -1,13 +1,22 @@
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 @use "../abstracts/variables" as v;
 
 /* =========================================================
-   NAV
+   NAV WRAPPER
 ========================================================= */
+
 .nav {
   display: flex;
   align-items: center;
   gap: 14px;
 }
+
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
 
 .nav__list {
   display: flex;
@@ -18,16 +27,19 @@
   align-items: center;
 }
 
+.nav__item {
+  list-style: none;
+}
+
 .nav__link {
   color: v.$color-white;
-  font-family: v.$font-heading; /* Aleo */
+  font-family: v.$font-heading;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-  letter-spacing: 0;
   text-transform: uppercase;
-  opacity: 0.95;
   text-decoration: none;
+  opacity: 0.95;
   transition: opacity 0.2s ease;
 }
 
@@ -37,18 +49,26 @@
   }
 }
 
-/* Toggle (mobil) */
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
 .nav__toggle {
   display: none;
   background: transparent;
   border: 0;
   color: v.$color-white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: v.$radius-sharp;
   cursor: pointer;
 }
 
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
 @media (max-width: v.$bp-md) {
+
   .nav__toggle {
     display: inline-flex;
     align-items: center;
@@ -60,12 +80,14 @@
     position: absolute;
     right: 30px;
     top: 80px;
+
     flex-direction: column;
+    gap: 12px;
+
     background: v.$color-white;
     border: 1px solid v.$line;
-    border-radius: v.$radius;
+    border-radius: v.$radius-sharp;
     padding: 14px;
-    gap: 12px;
     min-width: 240px;
     box-shadow: v.$shadow;
   }

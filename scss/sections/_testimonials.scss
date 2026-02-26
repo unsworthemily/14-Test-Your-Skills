@@ -3,13 +3,13 @@
 /* =========================================================
    DEL 6 — TESTIMONIALS (background6.png)
 ========================================================= */
+
 .testimonials {
   min-height: 731px;
   display: flex;
   align-items: center;
-  color: #fff;
+  color: v.$color-white;
 
-  /* Jämn overlay */
   background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url("../images/background6.png") center/cover no-repeat;
@@ -25,7 +25,7 @@
   font-size: 36px;
   line-height: 26px;
   letter-spacing: 0;
-  color: #fff;
+  color: v.$color-white;
   margin: 0 0 80px;
   text-align: center;
 }
@@ -33,10 +33,13 @@
 /* Kortet (bild + text-ruta) */
 .testimonial-card {
   margin: 0 auto;
-  width: min(1170px, 100%);
+  width: min(v.$container, 100%);
   display: grid;
   grid-template-columns: 445px 1fr;
   align-items: stretch;
+  gap: 0;
+  overflow: hidden; /* håller bilden + content snyggt ihop */
+  border-radius: v.$radius-sharp;
 }
 
 .testimonial-card__img {
@@ -47,9 +50,10 @@
 }
 
 .testimonial-card__content {
-  background: #232323;
+  background: v.$color-dark;
   min-height: 287px;
   padding: 40px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +64,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
-  color: #fefefe;
+  color: v.$color-white;
   margin: 0 0 18px;
 }
 
@@ -74,14 +78,17 @@
   margin: 0;
 }
 
+/* Responsive */
 @media (max-width: v.$bp-md) {
   .testimonial-card {
     grid-template-columns: 1fr;
   }
+
   .testimonial-card__img {
     width: 100%;
     height: auto;
   }
+
   .testimonial-card__content {
     min-height: auto;
   }

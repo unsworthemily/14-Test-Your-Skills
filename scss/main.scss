@@ -1,19 +1,26 @@
-@use "abstracts/variables";
-@use "abstracts/mixins";
+/* =========================================================
+   MAIN (entry)
+========================================================= */
 
-@use "base/reset";
-@use "base/typography";
+/* Base */
+@use "base/normalize";
 @use "base/base";
+@use "base/typography";
 
+/* Layout */
+@use "layout/container";
 @use "layout/header";
 @use "layout/footer";
-@use "layout/grid";
 
+/* Components */
+@use "components/navbar";
 @use "components/buttons";
 @use "components/cards";
 @use "components/forms";
 
+/* Sections */
 @use "sections/hero";
-@use "sections/about";
-@use "sections/services";
-@use "sections/contact";
+@use "sections/why";
+@use "sections/steps";
+@use "sections/features";
+@use "sections/testimonials";

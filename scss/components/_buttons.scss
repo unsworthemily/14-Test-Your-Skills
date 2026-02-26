@@ -1,4 +1,8 @@
-@use "variables" as v;
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+@use "../abstracts/variables" as v;
 
 /* =========================================================
    BASE BUTTON
@@ -15,15 +19,16 @@
   line-height: 26px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  text-decoration: none;
 
   border: 0;
-  border-radius: 0;
+  border-radius: 0; /* Bhromaon = kantig */
+  text-decoration: none;
   cursor: pointer;
 
-  transition: background 0.2s ease,
-              filter 0.2s ease,
-              transform 0.1s ease;
+  transition:
+    background 0.2s ease,
+    filter 0.2s ease,
+    transform 0.1s ease;
 }
 
 /* =========================================================
@@ -45,21 +50,29 @@
 ========================================================= */
 
 .btn--primary {
-  background: v.$color-primary; /* #5474FD */
+  background: v.$color-primary;
   color: v.$color-white;
-}
 
-.btn--primary:hover {
-  background: #496BFE;
+  @media (hover: hover) {
+    &:hover {
+      background: v.$color-primary-dark;
+    }
+  }
 }
 
 .btn--gradient {
-  background: linear-gradient(90deg, #496BFE, #5474FD);
+  background: linear-gradient(
+    90deg,
+    v.$color-primary-dark,
+    v.$color-primary
+  );
   color: v.$color-white;
-}
 
-.btn--gradient:hover {
-  filter: brightness(0.95);
+  @media (hover: hover) {
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
 }
 
 /* =========================================================

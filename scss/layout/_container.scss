@@ -1,8 +1,18 @@
 @use "../abstracts/variables" as v;
 
-/* Container (används överallt i HTML) */
+/* =========================================================
+   LAYOUT UTILITIES
+========================================================= */
+
+/* Container (används överallt i HTML-EN) */
 .container {
-  width: min(v.$container, calc(100% - 60px)); /* 30px padding per sida */
+  width: min(v.$container, calc(100% - 60px)); /* 30px per sida */
+  margin: 0 auto;
+}
+
+/* Valfritt: tajtare container */
+.container--tight {
+  width: min(v.$container, calc(100% - 40px)); /* 20px per sida */
   margin: 0 auto;
 }
 

@@ -3,6 +3,7 @@
 /* =========================================================
    DEL 4 & 5 — FEATURE (background4/5)
 ========================================================= */
+
 .feature {
   min-height: 700px;
   position: relative;
@@ -11,38 +12,50 @@
   overflow: hidden;
 }
 
+/* Bakgrund */
 .feature__bg {
   position: absolute;
   inset: 0;
   background: center/cover no-repeat;
+  z-index: 0;
 }
 
-.feature__bg--one { background-image: url("../images/background4.png"); }
-.feature__bg--two { background-image: url("../images/background5.png"); }
+.feature__bg--one {
+  background-image: url("../images/background4.png");
+}
 
+.feature__bg--two {
+  background-image: url("../images/background5.png");
+}
+
+/* Overlay */
 .feature__bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* lite ljusare än 0.30 */
   background: rgba(0, 0, 0, 0.25);
 }
 
+/* Innehåll över overlay */
 .feature__inner {
   position: relative;
   z-index: 2;
 }
 
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
 .feature-card {
-  background: rgba(35, 35, 35, 0.9); /* #232323 @ 90% */
+  background: rgba(35, 35, 35, 0.9);
   padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  border-radius: 0;
+  border-radius: v.$radius-sharp;
 }
 
-/* storlekar enligt dina specs */
+/* Storlekar */
 .feature--left .feature-card {
   width: 543px;
   min-height: 374px;
@@ -54,40 +67,44 @@
   margin-left: auto;
 }
 
+/* Meta */
 .feature-card__meta {
   font-family: v.$font-body;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: #e8e8e8;
   margin: 0;
-  text-transform: uppercase;
 }
 
+/* Titel */
 .feature-card__title {
   font-family: v.$font-body;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
-  letter-spacing: 0;
-  color: #fefefe;
   text-transform: uppercase;
+  color: v.$color-white;
   margin: 0;
 }
 
+/* Text */
 .feature-card__text {
   max-width: 508px;
   font-family: v.$font-body;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  letter-spacing: 0;
   color: #e8e8e8;
   margin: 0;
 }
 
-/* Book Now knapp (228x63) */
+/* =========================================================
+   BUTTON
+========================================================= */
+
 .feature-card__btn {
   width: 228px;
   height: 63px;
@@ -95,10 +112,15 @@
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(90deg, #496BFE, #5474FD);
-  color: #fff;
+  background: linear-gradient(
+    90deg,
+    v.$color-primary-dark,
+    v.$color-primary
+  );
 
-  font-family: v.$font-heading; /* Aleo */
+  color: v.$color-white;
+
+  font-family: v.$font-heading;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -106,7 +128,8 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  border-radius: 0;
+  border-radius: v.$radius-sharp;
+
   transition: filter 0.2s ease, transform 0.1s ease;
 }
 
@@ -115,10 +138,26 @@
     filter: brightness(0.95);
   }
 }
+
 .feature-card__btn:active {
   transform: translateY(1px);
 }
+
 .feature-card__btn:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 3px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: v.$bp-md) {
+
+  .feature--left .feature-card,
+  .feature--right .feature-card {
+    width: 100%;
+    min-height: auto;
+  }
+
 }

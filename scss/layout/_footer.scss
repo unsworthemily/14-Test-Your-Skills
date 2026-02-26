@@ -1,19 +1,19 @@
-@use "../variables" as v;
-
 /* =========================================================
    FOOTER (Del 7)
 ========================================================= */
 
+@use "../abstracts/variables" as v;
+
 .footer {
   color: v.$color-white;
-  padding: 90px 0; /* justera vid behov för att matcha höjden 271 */
+  padding: 90px 0;
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
     url("../images/background3.png") center/cover no-repeat;
 }
 
-/* Byt från "vänster/höger" till centrerad kolumn */
+/* Centrera allt */
 .footer__inner {
   display: flex;
   flex-direction: column;
@@ -24,16 +24,16 @@
   text-align: center;
 }
 
-/* Brand-blocket i mitten */
+/* Brand-blocket */
 .footer__brand {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* BHROMAON: Josefin Sans Bold 24, line-height 26, letter spacing 3.36 */
+/* BHROMAON */
 .footer__logo {
-  font-family: v.$font-body;   /* Josefin Sans */
+  font-family: v.$font-body;
   font-weight: 700;
   font-size: 24px;
   line-height: 26px;
@@ -44,19 +44,20 @@
   text-decoration: none;
 }
 
-/* Avståndet mellan BHROMAON och tagline = 11px */
+/* Tagline */
 .footer__tagline {
   margin: 11px 0 0;
-  font-family: v.$font-body;   /* Josefin Sans */
+
+  font-family: v.$font-body;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 1.6px;
+
   color: v.$color-white;
-  opacity: 1;
 }
 
-/* Ikonrad centrerad */
+/* Social icons row */
 .footer__social {
   display: flex;
   justify-content: center;
@@ -65,10 +66,10 @@
 
   list-style: none;
   padding: 0;
-  margin: 10px 0 0; /* lite luft under texten */
+  margin: 10px 0 0;
 }
 
-/* Cirklarna runt ikonerna */
+/* Icon circles */
 .footer__icon {
   width: 40px;
   height: 40px;
@@ -97,13 +98,13 @@
   outline-offset: 3px;
 }
 
-/* Font Awesome ikoner */
+/* Font Awesome icons */
 .footer__icon i {
-  font-size: 14px; /* känns nära figma-storleken visuellt */
+  font-size: 14px;
   line-height: 1;
 }
 
-/* Responsivt: håll allt centrerat */
+/* Responsive */
 @media (max-width: v.$bp-md) {
   .footer {
     padding: 70px 0;

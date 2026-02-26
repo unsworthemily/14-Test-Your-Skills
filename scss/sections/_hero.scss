@@ -17,7 +17,6 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* Lite ljusare än tidigare (Figma-känsla) */
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.45),
@@ -33,8 +32,8 @@
 }
 
 .hero__title {
-  margin: 0 0 11px; /* exakt 11px till subtitle */
-  font-family: v.$font-body; /* Josefin Sans */
+  margin: 0 0 11px;
+  font-family: v.$font-body;
   font-weight: 700;
   font-size: 48px;
   line-height: 76px;
@@ -53,7 +52,7 @@
   opacity: 0.95;
 }
 
-/* Search-form (inte rundad) */
+/* Search-form (kantig, exakt höjd) */
 .hero__form {
   width: min(650px, 100%);
   height: 63px;
@@ -62,8 +61,8 @@
   display: grid;
   grid-template-columns: 1fr 153px;
 
-  background: #fff;
-  border-radius: 0;
+  background: v.$color-white;
+  border-radius: v.$radius-sharp;
   overflow: hidden;
 }
 
@@ -84,9 +83,14 @@
   opacity: 1;
 }
 
-/* Knapp: fyll HELA högerdelen */
+.hero__input:focus-visible {
+  outline: 3px solid v.$color-primary;
+  outline-offset: -3px; /* hamnar innanför ramen */
+}
+
+/* Knapp */
 .hero__btn {
-  background: v.$color-primary; /* #5474FD */
+  background: v.$color-primary;
   border: 0;
   height: 100%;
   width: 100%;
@@ -100,6 +104,21 @@
   transition: filter 0.2s ease, transform 0.1s ease;
 }
 
+@media (hover: hover) {
+  .hero__btn:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.hero__btn:active {
+  transform: translateY(1px);
+}
+
+.hero__btn:focus-visible {
+  outline: 3px solid v.$color-white;
+  outline-offset: 3px;
+}
+
 .hero__btn-text {
   font-family: v.$font-heading; /* Aleo */
   font-weight: 400;
@@ -107,7 +126,7 @@
   line-height: 26px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #fff;
+  color: v.$color-white;
 }
 
 .hero__btn-icon {
@@ -116,31 +135,42 @@
   object-fit: contain;
 }
 
-@media (hover: hover) {
-  .hero__btn:hover {
-    filter: brightness(0.95);
-  }
-}
-.hero__btn:active {
-  transform: translateY(1px);
-}
-.hero__btn:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
-}
-
 /* Scroll down */
 .hero__scroll {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   margin-top: 6px;
+
   font-family: v.$font-body;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   letter-spacing: 2.8px;
-  color: #fff;
+
+  color: v.$color-white;
   text-transform: uppercase;
   opacity: 0.95;
+}
+
+/* =========================================================
+   RESPONSIVE (mobil)
+========================================================= */
+@media (max-width: v.$bp-md) {
+  .hero__inner {
+    padding: 60px 0;
+  }
+
+  .hero__form {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero__input {
+    height: 63px;
+  }
+
+  .hero__btn {
+    height: 63px;
+  }
 }

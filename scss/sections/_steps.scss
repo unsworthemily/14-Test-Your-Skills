@@ -3,6 +3,7 @@
 /* =========================================================
    DEL 3 — SEARCH / SELECT / BOOK (background3.png)
 ========================================================= */
+
 .steps {
   min-height: 340px;
   position: relative;
@@ -23,10 +24,11 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center; /* gör centrerat mer “pixel-säkert” */
   align-items: end;
   text-align: center;
 
-  padding: 70px 0 60px; /* skapar luft + plats för bågen bakom */
+  padding: 70px 0 60px; /* luft + plats för bågen bakom */
 }
 
 .step {
@@ -42,17 +44,9 @@
   object-fit: contain;
 }
 
-.step__img--search {
-  width: 105px;
-}
-
-.step__img--select {
-  width: 85px;
-}
-
-.step__img--book {
-  width: 110px;
-}
+.step__img--search { width: 105px; }
+.step__img--select { width: 85px; }
+.step__img--book   { width: 110px; }
 
 /* Texten under */
 .step__label {
@@ -65,12 +59,13 @@
   margin-top: 6px;
 }
 
-/* BÅGEN: bakom ikonerna, lägre ner */
+/* Bågen bakom */
 .steps__shape {
   position: absolute;
   left: 50%;
-  bottom: 22px; /* <- detta är nyckeln (sänk bågen) */
+  bottom: 22px;
   transform: translateX(-50%);
+
   width: 777px;
   height: 95px;
 
@@ -79,16 +74,22 @@
   pointer-events: none;
 }
 
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
 @media (max-width: v.$bp-md) {
+
   .steps__inner {
     grid-template-columns: 1fr;
     gap: 26px;
     padding: 70px 0 110px;
   }
 
+  /* så bågen inte klipps i bredd på små skärmar */
   .steps__shape {
-    width: 777px;
-    height: 95px;
-    object-fit: contain;
+    max-width: 777px;
+    width: 100%;
+    height: auto;
   }
 }

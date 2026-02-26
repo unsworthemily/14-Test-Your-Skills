@@ -2,39 +2,71 @@
    VARIABLES
 ========================================================= */
 
-/* Typography */
-$font-body: "Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+$font-body: "Josefin Sans", system-ui, -apple-system,
+  "Segoe UI", Roboto, Arial, sans-serif;
+
 $font-heading: "Aleo", serif;
 
-/* Colors */
+
+/* =========================================================
+   COLORS
+========================================================= */
+
 $color-bg: #f6f7fb;
-$color-text: #111;
+$color-text: #111111;
 $color-muted: rgba(16, 17, 20, 0.72);
 
-$color-white: #fff;
+$color-white: #ffffff;
+
 $color-primary: #5474fd;
 $color-primary-dark: #496bfe;
 
-$color-dark: #232323; /* används i testimonials/feature */
+$color-dark: #232323;     // används i feature/testimonials
 $color-light: #f8f8f8;
 
-$line: rgba(15, 23, 42, 0.12); /* funkar för borders (forms/nav popup) */
 $color-error: #b00020;
 
-/* Effects */
+$line: rgba(15, 23, 42, 0.12);
+
+
+/* =========================================================
+   EFFECTS
+========================================================= */
+
 $shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+
+/* Rund UI */
 $radius: 18px;
 
-/* Layout */
+/* Bhromaon-stil (kantig design) */
+$radius-sharp: 0;
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
 $container: 1170px;
 
-/* Breakpoints */
+
+/* =========================================================
+   BREAKPOINTS
+========================================================= */
+
 $bp-sm: 600px;
 $bp-md: 900px;
 $bp-lg: 1100px;
 $bp-xl: 1200px;
 
-/* Spacing scale */
+
+/* =========================================================
+   SPACING SCALE
+========================================================= */
+
 $space-xs: 4px;
 $space-sm: 8px;
 $space-md: 16px;
