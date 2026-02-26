@@ -111,15 +111,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background: linear-gradient(
     90deg,
     v.$color-primary-dark,
     v.$color-primary
   );
-
   color: v.$color-white;
-
   font-family: v.$font-heading;
   font-weight: 400;
   font-size: 16px;
@@ -127,9 +124,7 @@
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-decoration: none;
-
   border-radius: v.$radius-sharp;
-
   transition: filter 0.2s ease, transform 0.1s ease;
 }
 

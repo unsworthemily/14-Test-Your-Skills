@@ -88,17 +88,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background: $bg;
   color: $color;
-
   border: 0;
   border-radius: $radius;
   padding: $padding;
-
   cursor: pointer;
   text-decoration: none;
-
   transition: opacity 0.2s ease, transform 0.1s ease;
 
   @media (hover: hover) {

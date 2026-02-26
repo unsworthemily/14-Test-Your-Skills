@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-
   color: #e8e8e8;
   background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
@@ -21,13 +20,11 @@
 .steps__inner {
   position: relative;
   z-index: 2;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center; /* gör centrerat mer “pixel-säkert” */
   align-items: end;
   text-align: center;
-
   padding: 70px 0 60px; /* luft + plats för bågen bakom */
 }
 
@@ -65,10 +62,8 @@
   left: 50%;
   bottom: 22px;
   transform: translateX(-50%);
-
   width: 777px;
   height: 95px;
-
   z-index: 1;
   opacity: 0.9;
   pointer-events: none;

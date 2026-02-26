@@ -12,19 +12,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   font-family: v.$font-heading; /* Aleo */
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-
   border: 0;
   border-radius: 0; /* Bhromaon = kantig */
   text-decoration: none;
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     filter 0.2s ease,
